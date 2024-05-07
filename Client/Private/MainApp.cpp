@@ -10,6 +10,11 @@ CMainApp::CMainApp()
 	/* 싱글턴 객체의 주소는 자체 클래스 안의 멤버변수에 보관하지만 그 주소를 CMainApp클래스에 멤버변수에도 공유하였기때문 */
 }
 
+int Add()
+{
+	return 0;
+}
+
 HRESULT CMainApp::Initialize()
 {
 	/* 내 게임을 진행하기위해 필요한 여러 초기화 작업을 수행한다. */
@@ -26,7 +31,7 @@ HRESULT CMainApp::Initialize()
 		return E_FAIL;
 
 	int a = 10;
-
+	int b = 20;
 
 	return S_OK;
 }
