@@ -41,6 +41,7 @@ HRESULT CMainApp::Render()
 	m_pGameInstance->Render_Begin();
 
 	int b = 30;
+	int c = 40;
 
 	m_pGameInstance->Render_Engine();
 
