@@ -8,7 +8,6 @@ CMainApp::CMainApp()
 	: m_pGameInstance{ CGameInstance::Get_Instance() }
 {
 	/* 싱글턴 객체의 주소는 자체 클래스 안의 멤버변수에 보관하지만 그 주소를 CMainApp클래스에 멤버변수에도 공유하였기때문 */
-	Safe_AddRef(m_pGameInstance);
 }
 
 HRESULT CMainApp::Initialize()
@@ -26,6 +25,9 @@ HRESULT CMainApp::Initialize()
 	if (FAILED(Open_Level(LEVEL_LOGO)))
 		return E_FAIL;
 
+	int a = 10;
+
+
 	return S_OK;
 }
 
@@ -37,6 +39,8 @@ void CMainApp::Update(_float fTimeDelta)
 HRESULT CMainApp::Render()
 {
 	m_pGameInstance->Render_Begin();
+
+	int b = 30;
 
 	m_pGameInstance->Render_Engine();
 
